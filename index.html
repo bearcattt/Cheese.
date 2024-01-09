@@ -25,25 +25,31 @@
 }
 
 .hole {
-  width: 150px;  /* Increased width for larger holes */
-  height: 150px;  /* Increased height for larger holes */
-  background-color: black;  /* Sets the hole color to black */
+  background-color: black; /* Sets the hole color to black */
   border-radius: 50%;  /* Makes the holes circular */
   position: absolute;  /* Positions the holes freely */
+  /* Remove this next line, it was hiding the holes by setting their size to 0 */
+  /* transform: scale(0); */
 }
 
 /* Example usage: Place three holes randomly on the screen */
 .hole:nth-child(1) {
+  width: 50px; /* Adjust the width as desired */
+  height: 50px; /* Adjust the height as desired */
   top: 20%;
   left: 40%;
 }
 
 .hole:nth-child(2) {
+  width: 75px; /* Adjust the width as desired */
+  height: 75px; /* Adjust the height as desired */
   top: 60%;
   right: 20%;
 }
 
 .hole:nth-child(3) {
+  width: 100px; /* Adjust the width as desired */
+  height: 100px; /* Adjust the height as desired */
   bottom: 10%;
   left: 70%;
 }
