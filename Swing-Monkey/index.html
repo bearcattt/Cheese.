@@ -1,0 +1,23 @@
+<script>
+function clickPlayNowButton() {
+  const iframe = document.getElementById('frame'); // Replace 'myIframe' with your iframe's ID
+  if (iframe) {
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    const playNowButton = iframeDoc.getElementById('playNowButton');
+
+    if (playNowButton) {
+      playNowButton.click();
+    } else {
+      console.error('Button with ID "playNowButton" not found within the iframe.');
+    }
+  } else {
+    console.error('Iframe with ID "myIframe" not found.');
+  }
+}
+</script>
+
+<iframe id="frame"
+              src="https://www.coolmathgames.com/0-swing-monkey?scrlybrkr=b7605d8e#immersiveModal"
+              frameborder="1"
+              width="400" height="220">
+      </iframe>
