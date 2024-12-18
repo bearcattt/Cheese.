@@ -18,18 +18,43 @@
         h1 {
             text-align: center;
             color: #d4ac0d;
-            font-size: 2.5em;
-            margin: 20px 0;
+            font-size: 2em; /* Reduced font size */
+            margin: 15px 0; /* Reduced margin */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .image-container {
-            display: block;
+            display: flex; /* Use flexbox for alignment */
+            justify-content: flex-end; /* Align items to the right */
             margin: 0 auto;
             max-width: 80%;
             border: 5px solid #d4ac0d;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden; /* Ensures that the image fits within the container */
+        }
+
+        .cheese-game-image {
+            width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .hole {
+            position: absolute;
+            background-color: #f9e79f; /* Same as cheese color */
+            border-radius: 50%; /* Make it circular */
+            opacity: 0.8; /* Slightly transparent */
+        }
+
+        /* Positioning the holes */
+        .hole1 { width: 30px; height: 30px; top: 20%; left: 15%; }
+        .hole2 { width: 40px; height: 40px; top: 50%; left: 30%; }
+        .hole3 { width: 25px; height: 25px; top: 70%; left: 60%; }
+        .hole4 { width: 35px; height: 35px; top: 30%; left: 75%; }
+
+        .cheese-icon {
+            width: 30px; /* Set the width of the cheese icon */
+            height: auto; /* Maintain aspect ratio */
         }
 
         .description {
@@ -60,9 +85,13 @@
     </style>
 </head>
 <body>
-    <h1>THE PWR OF CHEESE IS BACK AMONG US ඞ! <img src="./img/cheese.png" alt="Cheese Icon"></h1>
-    <a>
-        <img class="image-container" src="IMG_3623.jpeg" alt="Test">
-    </a>
+    <h1>THE PWR OF CHEESE IS BACK AMONG US <img class="cheese-icon" src="./img/cheese.png" alt="Cheese Icon"></h1>
+    <div class="image-container">
+        <img class="cheese-game-image" src="IMG_3623.jpeg" alt="Cheese Game">
+        <div class="hole hole1"></div>
+        <div class="hole hole2"></div>
+        <div class="hole hole3"></div>
+        <div class="hole hole4"></div>
+    </div>
 </body>
 </html>
